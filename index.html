@@ -1,98 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
+    <title>QuickQR</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
 
-<title>QuickQR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
 
-<link rel="stylesheet" href="style.css">
+  <body>
+    <div class="container">
+      <h1>⚡ QuickQR</h1>
+        <div class="button-group">
+          <button id="mode" value="dark"> 🌙 DARK MODE</button>
+        </div>
+      <p class="subtitle">Generate beautiful QR codes instantly.</p>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+      <div id="inputSection">
+        <input id="inputText" type="text" placeholder="Enter URL or text" />
 
-</head>
+        <button id="generateBtn">⚡ Generate QR</button>
+      </div>
 
-<body>
+      <div id="resultSection">
+        <h2>✨ QR Generated Successfully</h2>
 
-<div class="container">
+        <div id="qrcode"></div>
 
-<h1>⚡ QuickQR</h1>
+        <div class="button-group">
+          <button id="downloadBtn">⬇ Download PNG</button>
 
-<p class="subtitle">
+          <button id="newBtn">↺ Generate New</button>
+        </div>
+      </div>
 
-Generate beautiful QR codes instantly.
+      <div class="footer">
+        <p>shweba shiekh</p>
 
-</p>
+        <p>sheikhshweba@gmail.com</p>
 
+        <a href="https://digitalheroesco.com" target="_blank">
+          <button>Built for Digital Heroes</button>
+        </a>
+      </div>
+    </div>
 
-<div id="inputSection">
-
-<input
-id="inputText"
-type="text"
-placeholder="Enter URL or text">
-
-<button id="generateBtn">
-
-⚡ Generate QR
-
-</button>
-
-</div>
-
-
-<div id="resultSection">
-
-<h2>✨ QR Generated Successfully</h2>
-
-<div id="qrcode"></div>
-
-<div class="button-group">
-
-<button id="downloadBtn">
-
-⬇ Download PNG
-
-</button>
-
-<button id="newBtn">
-
-↺ Generate New
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="footer">
-
-<p>shweba shiekh</p>
-
-<p>sheikhshweba@gmail.com</p>
-
-<a href="https://digitalheroesco.com"
-
-target="_blank">
-
-<button>
-
-Built for Digital Heroes
-
-</button>
-
-</a>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

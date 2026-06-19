@@ -1,4 +1,4 @@
-body {
+body{
 
   margin: 0;
 
@@ -76,4 +76,22 @@ button {
 
   margin-top: 30px;
 
+}
+
+
+/* =======CHANGING TO THE DARK MODE */
+
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.dark .container{
+background:#1e293b;
+}
+
+.dark input{
+background:#334155;
+color:white;
 }

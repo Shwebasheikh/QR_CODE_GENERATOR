@@ -15,64 +15,72 @@ const newBtn = document.getElementById("newBtn");
 
 generateBtn.addEventListener("click", () => {
 
-const value = input.value.trim();
+    const value = input.value.trim();
 
-if(value===""){
+    if (value === "") {
 
-alert("Please enter text or URL");
+        alert("Please enter text or URL");
 
-return;
+        return;
 
-}
+    }
 
-qrContainer.innerHTML="";
+    qrContainer.innerHTML = "";
 
-new QRCode(qrContainer,{
+    new QRCode(qrContainer, {
 
-text:value,
+        text: value,
 
-width:220,
+        width: 220,
 
-height:220
+        height: 220
 
-});
+    });
 
-inputSection.style.display="none";
+    inputSection.style.display = "none";
 
-resultSection.style.display="block";
-
-});
-
-
-downloadBtn.addEventListener("click",()=>{
-
-const image = qrContainer.querySelector("img");
-
-if(!image){
-
-return;
-
-}
-
-const link = document.createElement("a");
-
-link.href=image.src;
-
-link.download="QuickQR.png";
-
-link.click();
+    resultSection.style.display = "block";
 
 });
 
 
-newBtn.addEventListener("click",()=>{
+downloadBtn.addEventListener("click", () => {
 
-input.value="";
+    const image = qrContainer.querySelector("img");
 
-qrContainer.innerHTML="";
+    if (!image) {
 
-resultSection.style.display="none";
+        return;
 
-inputSection.style.display="block";
+    }
+
+    const link = document.createElement("a");
+
+    link.href = image.src;
+
+    link.download = "QuickQR.png";
+
+    link.click();
+
+});
+
+
+newBtn.addEventListener("click", () => {
+
+    input.value = "";
+
+    qrContainer.innerHTML = "";
+
+    resultSection.style.display = "none";
+
+    inputSection.style.display = "block";
+
+});
+
+
+const mode = document.getElementById("mode");
+mode.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
 
 });
